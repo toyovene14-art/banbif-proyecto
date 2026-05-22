@@ -1,0 +1,65 @@
+{
+  "name": "Article",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "T\u00edtulo del art\u00edculo"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL slug \u00fanico"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "Banbif en L\u00ednea",
+        "Cuentas Empresariales",
+        "Transferencias",
+        "Cr\u00e9ditos PYME",
+        "Gu\u00edas paso a paso",
+        "RUC y SUNAT"
+      ],
+      "description": "Categor\u00eda del art\u00edculo"
+    },
+    "excerpt": {
+      "type": "string",
+      "description": "Resumen corto para listados (m\u00e1x 160 chars)"
+    },
+    "content": {
+      "type": "string",
+      "description": "Contenido HTML completo del art\u00edculo"
+    },
+    "reading_time": {
+      "type": "number",
+      "description": "Tiempo de lectura estimado en minutos"
+    },
+    "meta_description": {
+      "type": "string",
+      "description": "Meta descripci\u00f3n SEO (m\u00e1x 155 chars)"
+    },
+    "featured_image": {
+      "type": "string",
+      "description": "URL de imagen destacada"
+    },
+    "published": {
+      "type": "boolean",
+      "default": true,
+      "description": "Si el art\u00edculo est\u00e1 publicado"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Etiquetas del art\u00edculo"
+    }
+  },
+  "required": [
+    "title",
+    "slug",
+    "category",
+    "excerpt",
+    "content"
+  ]
+}
